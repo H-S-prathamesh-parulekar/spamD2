@@ -9,8 +9,8 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
 
 app = Flask(__name__)
-app.debug = True
-app.config['SECRET_KEY'] = 'DontTellAnyone'
+# app.debug = True
+# app.config['SECRET_KEY'] = 'DontTellAnyone'
 # toolbar = DebugToolbarExtension(app)
 @app.route('/')
 def home():
