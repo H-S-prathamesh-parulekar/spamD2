@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from flask_debugtoolbar import DebugToolbarExtension
+# from flask_debugtoolbar import DebugToolbarExtension
 import pandas as pd
 import csv
 import numpy as np
@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 app = Flask(__name__)
 app.debug = True
 app.config['SECRET_KEY'] = 'DontTellAnyone'
-toolbar = DebugToolbarExtension(app)
+# toolbar = DebugToolbarExtension(app)
 @app.route('/')
 def home():
     return render_template('index.html')
