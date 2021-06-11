@@ -1,1 +1,1 @@
-web: gunicorn Spam_D : app
+web: gunicorn App : app
