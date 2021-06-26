@@ -54,11 +54,11 @@
 							{% if prediction2 == 1%}
 					
 						<h2 style="color:rgb(255, 255, 255);font-family: 'Roboto', sans-serif;">Last Email Content :</h2>
-						<textarea class="boxed" style="color:black;background: rgba(0,0,0,0.3);border: 1px solid red">{% print(data1)%}</textarea>		
+						<textarea class="boxed" style="color:yellowgreen;background: rgba(0,0,0,0.3);border: 1px solid red">{% print(data1)%}</textarea>		
 					<h2 style="color:red;text-align: center">Looking Spam, Be safe</h2>
 					{% elif prediction2 == 0%}
 							<h2 style="color:rgb(255, 255, 255); font-family: 'Roboto', sans-serif;">Last Email Content :</h2>
-						<textarea  class="boxed" style="color:black;background: rgba(0,0,0,0.3);border: 1px solid green">{% print(data1)%}</textarea>		
+						<textarea  class="boxed" style="color:yellowgreen;background: rgba(0,0,0,0.3);border: 1px solid green">{% print(data1)%}</textarea>		
 								<h2 style="color:green;text-align: center"><b>Not a Spam</b></h2>
 					{% endif %}
 
