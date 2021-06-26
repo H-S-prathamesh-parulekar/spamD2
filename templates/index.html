@@ -16,9 +16,12 @@
 
 <body>
 
+	
+	<div class="container " style="margin-top: 7%;margin-bottom: 7%;">
+		  <a class="btn btn-light pull-right" style="margin-left: 99%;margin-top: -7%" href="/">Home</a>
 
-	<div class="container " style="margin-top: 7%;">
 		<div class="row">
+
 				<div class="row text-center "style="text-align:center;width: 100%;">
 					<h1 style="text-align: center;color:white;margin-left: 15%;" >182010021: PRATHAMESH H PARULEKAR</h1>
 				</div>
@@ -32,8 +35,9 @@
 						<textarea  name="message" rows="6" cols="50" required="required"></textarea>
 						<br> </br>
 						<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-
-							<div class="results text-center">
+							
+								<div class="results text-center">
+						
 
 					{% if prediction == 1%}
 					<h2 style="color:red;">Looking Spam, Be safe</h2>
@@ -44,7 +48,22 @@
 					</div>
 
 					</form>
+<hr size="30" noshade>
 
+						<div>
+							{% if prediction2 == 1%}
+					
+						<h2 style="color:rgb(255, 255, 255);font-family: 'Roboto', sans-serif;">Last Email Content :</h2>
+						<textarea class="boxed" style="color:black;background: rgba(0,0,0,0.3);border: 1px solid red">{% print(data1)%}</textarea>		
+					<h2 style="color:red;text-align: center">Looking Spam, Be safe</h2>
+					{% elif prediction2 == 0%}
+							<h2 style="color:rgb(255, 255, 255); font-family: 'Roboto', sans-serif;">Last Email Content :</h2>
+						<textarea  class="boxed" style="color:black;background: rgba(0,0,0,0.3);border: 1px solid green">{% print(data1)%}</textarea>		
+								<h2 style="color:green;text-align: center"><b>Not a Spam</b></h2>
+					{% endif %}
+
+						</div>
+							
 				</div>
 
 
