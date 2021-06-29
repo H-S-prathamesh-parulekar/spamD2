@@ -4,3 +4,5 @@ scikit-learn==0.24.2
 pandas
 Werkzeug
 gunicorn
+imaplib
+email

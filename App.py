@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-# from flask_debugtoolbar import DebugToolbarExtension
+from flask_debugtoolbar import DebugToolbarExtension
 import pandas as pd
 import csv
 import numpy as np
@@ -13,9 +13,9 @@ import imaplib
 import email
 import traceback
 app = Flask(__name__)
-# app.debug = True
-# app.config['SECRET_KEY'] = 'DontTellAnyone'
-# toolbar = DebugToolbarExtension(app)
+app.debug = True
+app.config['SECRET_KEY'] = 'DontTellAnyone'
+toolbar = DebugToolbarExtension(app)
 ORG_EMAIL = "@gmail.com"
 FROM_EMAIL = "mailchecker07" + ORG_EMAIL
 FROM_PWD = "vjti@1234"
@@ -103,7 +103,11 @@ def home():
         my_prediction2 = clf.predict(vect)
 
     #     # message = request.form['message']
-    return render_template('index.html', prediction2=my_prediction2, data1=data1)
+    if data1 is not None:
+        return render_template('index.html', prediction2=my_prediction2, data1=data1)
+    else:
+        return render_template('index.html')
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
