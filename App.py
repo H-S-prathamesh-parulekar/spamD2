@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from flask_debugtoolbar import DebugToolbarExtension
+# from flask_debugtoolbar import DebugToolbarExtension
 import pandas as pd
 import csv
 import numpy as np
@@ -13,9 +13,9 @@ import imaplib
 import email
 import traceback
 app = Flask(__name__)
-app.debug = True
-app.config['SECRET_KEY'] = 'DontTellAnyone'
-toolbar = DebugToolbarExtension(app)
+# app.debug = True
+# app.config['SECRET_KEY'] = 'DontTellAnyone'
+# toolbar = DebugToolbarExtension(app)
 ORG_EMAIL = "@gmail.com"
 FROM_EMAIL = "mailchecker07" + ORG_EMAIL
 FROM_PWD = "vjti@1234"
